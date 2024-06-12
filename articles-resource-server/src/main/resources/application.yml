@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
+
+spring:
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8080
+          jwk-set-uri: http://localhost:8080/.well-known/jwks.json
